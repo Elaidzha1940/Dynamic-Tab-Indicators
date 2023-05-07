@@ -34,19 +34,27 @@ struct Head: View {
         .tabViewStyle(.page(indexDisplayMode: .never))
         .ignoresSafeArea()
         .overlay(alignment: .top, content: {
-            TabView()
+            TabsView()
         })
         .preferredColorScheme(.dark)
+    }
+    @ViewBuilder
+    func TabsView () -> some View {
         
-        @ViewBuilder
-        func TabView () -> some View {
-            
-            HStack(spacing: 0) {
-                ForEach(tabs) { tab in
-                    
+        HStack(spacing: 0) {
+            ForEach($tabs) { $tab in
+                Text(tab.title)
+                    .fontWeight(.semibold)
+                
+                if tabs.last != tab {
+                    Spacer(minLength: 0)
                 }
+                
             }
         }
+        .padding([.top, .horizontal], 15)
+        
+        .foregroundColor(.white)
     }
 }
 
