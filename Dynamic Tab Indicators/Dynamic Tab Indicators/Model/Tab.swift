@@ -1,11 +1,11 @@
+//  /*
 //
+//  Project: Dynamic Tab Indicators
+//  File: Tab.swift
+//  Created by: Elaidzha Shchukin
+//  Date:  07.05.2023
 //
-//
-//  Tab.swift
-//  Dynamic Tab Indicators
-//
-//  Created by Elaidzha Shchukin on 07.05.2023.
-//
+//  */
 
 import SwiftUI
 
