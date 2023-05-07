@@ -60,6 +60,11 @@ struct Head: View {
                 Text(tab.title)
                     .fontWeight(.semibold)
                 
+                    .offsetX { rect in
+                        tab.minX = rect.minX
+                        tab.width = rect.width
+                    }
+                
                 if tabs.last != tab {
                     Spacer(minLength: 0)
                 }
