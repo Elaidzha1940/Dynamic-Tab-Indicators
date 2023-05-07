@@ -33,6 +33,20 @@ struct Head: View {
         }
         .tabViewStyle(.page(indexDisplayMode: .never))
         .ignoresSafeArea()
+        .overlay(alignment: .top, content: {
+            TabView()
+        })
+        .preferredColorScheme(.dark)
+        
+        @ViewBuilder
+        func TabView () -> some View {
+            
+            HStack(spacing: 0) {
+                ForEach(tabs) { tab in
+                    
+                }
+            }
+        }
     }
 }
 
