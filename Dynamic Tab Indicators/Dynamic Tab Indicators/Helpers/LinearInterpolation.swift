@@ -33,7 +33,11 @@ class LinearInterpolation {
             let y1 = outputRange [index - 1]
             let y2 = outputRange [index]
             
-            if x <= inputRange
+        /// Formula :  x2  + ((y2 - y1) / (x2 - x1))  * (x- x1)
+            if x <= inputRange [index] {
+                let resault =  x2  + ((y2 - y1) / (x2 - x1))  * (x- x1)
+                return resault
+            }
         }
         
         return outputRange [lenght]
