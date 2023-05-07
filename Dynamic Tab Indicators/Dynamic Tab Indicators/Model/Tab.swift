@@ -20,14 +20,14 @@ struct Tab: Identifiable, Hashable {
 var tabs_: [Tab] = [
     
     .init(title: "Hammererkopf"),
-    .init(title: "Gaugu"),
-    .init(title: "Korean"),
+//    .init(title: "Gaugu"),
+//    .init(title: "Korean"),
     .init(title: "Lenin"),
-//    .init(title: "Oppenheimer"),
+    .init(title: "Oppenheimer"),
 //    .init(title: "Silence"),
 //    .init(title: "TheBookofHenry"),
 //    .init(title: "TheImitationGame"),
-//    .init(title: "Tolkien"),
+    .init(title: "Tolkien"),
 //    .init(title: "VanGogh"),
 //    .init(title: "WaitingfortheBarbarian"),
 ]

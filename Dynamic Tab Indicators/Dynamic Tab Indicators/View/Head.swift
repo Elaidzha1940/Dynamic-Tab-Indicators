@@ -33,9 +33,11 @@ struct Head: View {
                 .clipped()
                 .ignoresSafeArea()
                 .offsetX { rect in
-                    if currentTab == tab {
+                    if currentTab.title == tab.title {
                         contentOffset = rect.minX - (rect.width * CGFloat(index(of: tab)))
                     }
+                    
+                    updateTabFrame(rect.width)
                 }
                 .tag(tab)
             }
@@ -65,8 +67,8 @@ struct Head: View {
         
         let positionInterpolitation = LinearInterpolation(inputRange: inputRange, outputRange: outputRangeForPosition)
         
-        IndicatorWidth = withInterpolitation.calculate(for: contentOffset)
-        IndicatorPosition = positionInterpolitation.calculate(for: contentOffset)
+        IndicatorWidth = withInterpolitation.calculate(for: -contentOffset)
+        IndicatorPosition = positionInterpolitation.calculate(for: -contentOffset)
     }
     
     func index(of tab: Tab) -> Int {
@@ -95,8 +97,8 @@ struct Head: View {
         .padding([.top, .horizontal], 15)
         .overlay(alignment: .bottomLeading, content: {
             Rectangle()
-                .frame(height: 4)
-                .offset(y: 10)
+                .frame(width: IndicatorWidth, height: 4)
+                .offset(x: IndicatorPosition, y: 10)
         })
         .foregroundColor(.white)
     }
