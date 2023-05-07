@@ -8,14 +8,17 @@
 import SwiftUI
 
 struct Head: View {
+    
+    @State private var currentTab: 
+    
     var body: some View {
         
-        Head()
+        TabView(selection: <#T##Binding<_>?#>, content: <#T##() -> _#>)
     }
 }
 
 struct Head_Previews: PreviewProvider {
     static var previews: some View {
-        Head()
+        ContentView()
     }
 }
