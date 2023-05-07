@@ -1,4 +1,6 @@
 //
+//
+//
 //  Tab.swift
 //  Dynamic Tab Indicators
 //
@@ -16,14 +18,17 @@ struct Tab: Identifiable, Hashable {
 }
 
 var tabs_: [Tab] = [
-
-    .init(title: "Gaugu")
-    .init(title: "Hammererkopf")
-    .init(title: "Korean")
-    .init(title: "")
-    .init(title: "")
-    .init(title: "")
-    .init(title: "")
-    .init(title:  "")
+    
+    .init(title: "Gaugu"),
+    .init(title: "Hammererkopf"),
+    .init(title: "Korean"),
+    .init(title: "Lenin"),
+    .init(title: "Oppenheimer"),
+    .init(title: "Silence"),
+    .init(title: "TheBookofHenry"),
+    .init(title:  "TheImitationGame"),
+    .init(title:  "Tolkien"),
+    .init(title:  "VanGogh"),
+    .init(title:  "WaitingfortheBarbarian"),
 ]
- 
+
