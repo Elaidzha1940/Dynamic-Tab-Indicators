@@ -23,7 +23,7 @@ class LinearInterpolation {
     
     func calculate(for x: CGFloat) -> CGFloat {
         
-        if <= inputRange [0] { return outputRange [0]}
+        if x <= inputRange[0] { return outputRange[0] }
         
         for index in 1...lenght {
             
@@ -33,9 +33,9 @@ class LinearInterpolation {
             let y1 = outputRange [index - 1]
             let y2 = outputRange [index]
             
-        /// Formula :  x2  + ((y2 - y1) / (x2 - x1))  * (x- x1)
+            /// Formula :  x2  + ((y2 - y1) / (x2 - x1))  * (x- x1)
             if x <= inputRange [index] {
-                let resault =  x2  + ((y2 - y1) / (x2 - x1))  * (x- x1)
+                let resault =  x2 + ((y2 - y1) / (x2 - x1))  * (x - x1)
                 return resault
             }
         }

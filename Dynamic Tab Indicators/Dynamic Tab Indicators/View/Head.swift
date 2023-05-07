@@ -48,6 +48,22 @@ struct Head: View {
         .preferredColorScheme(.dark)
     }
     
+    func updateTabFrame(_ tabViewWidth: CGFloat) {
+        let inputRange = tabs.indices.compactMap { index -> CGFloat ? in
+            return CGFloat(index) * tabViewWidth
+        }
+        
+        let outputRangeForWidth = tabs.compactMap { tab -> CGFloat ? in
+            return tab.width
+        }
+        
+        let outputRangePosition = tabs.compactMap { tab -> CGFloat ? in
+            return tab.minX
+        }
+        
+        let withInterpolitation
+    }
+    
     func index(of tab: Tab) -> Int {
         return tabs.firstIndex(of: tab) ?? 0
     }
