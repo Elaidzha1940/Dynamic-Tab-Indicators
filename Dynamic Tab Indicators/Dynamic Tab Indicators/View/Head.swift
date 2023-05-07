@@ -53,7 +53,11 @@ struct Head: View {
             }
         }
         .padding([.top, .horizontal], 15)
-        
+        .overlay(alignment: .bottomLeading, content: {
+            Rectangle()
+                .frame(height: 4)
+                .offset(y: 10)
+        })
         .foregroundColor(.white)
     }
 }
