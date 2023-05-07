@@ -13,6 +13,7 @@ struct Head: View {
     
     @State private var currentTab: Tab = tabs_[0]
     @State private var tabs: [Tab] = tabs_
+    @State private var contentOffset: CGFloat = 0
     
     var body: some View {
         
@@ -29,6 +30,12 @@ struct Head: View {
                 }
                 .clipped()
                 .ignoresSafeArea()
+                .offsetX { rect in
+                    if currentTab == tab {
+                        contentOffset = rect.minX - (rect.width * CGFloat(index(of: tab)))
+                    }
+                }
+                .tag(tab)
             }
         }
         .tabViewStyle(.page(indexDisplayMode: .never))
@@ -36,8 +43,17 @@ struct Head: View {
         .overlay(alignment: .top, content: {
             TabsView()
         })
+        .overlay(content: {
+            Text("\(contentOffset)")
+        })
         .preferredColorScheme(.dark)
+        
+        
     }
+    func index(of tab: Tab) -> Int {
+        return tabs.firstIndex(of: tab) ?? 0
+    }
+    
     @ViewBuilder
     func TabsView () -> some View {
         

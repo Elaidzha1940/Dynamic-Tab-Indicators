@@ -17,6 +17,7 @@ extension View {
                     
                     Color.clear
                         .preference(key: OffsetKey.self, value: rect)
+                        .onPreferenceChange(OffsetKey.self, perform: completion)
                 }
             }
         
