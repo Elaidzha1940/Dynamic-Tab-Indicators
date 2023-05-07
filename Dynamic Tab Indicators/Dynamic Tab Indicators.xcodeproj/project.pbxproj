@@ -14,6 +14,7 @@
 		E4C30A282A074BB60031498A /* Head.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4C30A272A074BB60031498A /* Head.swift */; };
 		E4C30A2A2A074D6B0031498A /* Tab.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4C30A292A074D6B0031498A /* Tab.swift */; };
 		E4C30A2C2A07571C0031498A /* ScrollOffset.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4C30A2B2A07571C0031498A /* ScrollOffset.swift */; };
+		E4C30A2E2A075DE80031498A /* LinearInterpolation.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4C30A2D2A075DE80031498A /* LinearInterpolation.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		E4C30A272A074BB60031498A /* Head.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Head.swift; sourceTree = "<group>"; };
 		E4C30A292A074D6B0031498A /* Tab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tab.swift; sourceTree = "<group>"; };
 		E4C30A2B2A07571C0031498A /* ScrollOffset.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollOffset.swift; sourceTree = "<group>"; };
+		E4C30A2D2A075DE80031498A /* LinearInterpolation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinearInterpolation.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +100,7 @@
 			isa = PBXGroup;
 			children = (
 				E4C30A2B2A07571C0031498A /* ScrollOffset.swift */,
+				E4C30A2D2A075DE80031498A /* LinearInterpolation.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -177,6 +180,7 @@
 				E4C30A2C2A07571C0031498A /* ScrollOffset.swift in Sources */,
 				E4C30A162A07495D0031498A /* Dynamic_Tab_IndicatorsApp.swift in Sources */,
 				E4C30A2A2A074D6B0031498A /* Tab.swift in Sources */,
+				E4C30A2E2A075DE80031498A /* LinearInterpolation.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
