@@ -49,19 +49,24 @@ struct Head: View {
     }
     
     func updateTabFrame(_ tabViewWidth: CGFloat) {
-        let inputRange = tabs.indices.compactMap { index -> CGFloat ? in
+        let inputRange = tabs.indices.compactMap { index -> CGFloat? in
             return CGFloat(index) * tabViewWidth
         }
         
-        let outputRangeForWidth = tabs.compactMap { tab -> CGFloat ? in
+        let outputRangeForWidth = tabs.compactMap { tab -> CGFloat? in
             return tab.width
         }
         
-        let outputRangePosition = tabs.compactMap { tab -> CGFloat ? in
+        let outputRangeForPosition = tabs.compactMap { tab -> CGFloat? in
             return tab.minX
         }
         
-        let withInterpolitation
+        let withInterpolitation = LinearInterpolation(inputRange: inputRange, outputRange: outputRangeForWidth)
+        
+        let positionInterpolitation = LinearInterpolation(inputRange: inputRange, outputRange: outputRangeForPosition)
+        
+        IndicatorWidth = withInterpolitation.calculate(for: contentOffset)
+        IndicatorPosition = positionInterpolitation.calculate(for: contentOffset)
     }
     
     func index(of tab: Tab) -> Int {
